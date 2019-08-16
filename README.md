@@ -17,3 +17,12 @@ Often, documents and books are being scanned two pages at a time. This tool allo
   
 Technically, you only have to provide the path for the input file. The tool will then split every page into two halves.
 You can skip pages (comma separated list) and you can shift the 'line' at which to cut. Positive values (0.1 to 49) will shift the line to the right (percantages of the width of the document) and negative values (-0.1 to -49) will shift the line to the left.
+
+**Creating a Binary**
+The Windows binary was created using `pyinstaller` on Windows 10. If you want to create your own binary:
+
+    - New environment conda create --name splitpdfmiddle python=3.7
+    - activate splitpdfmiddle
+    - pip install pyinstaller
+    - pip install -r requirements.txt
+    - pyinstaller --onefile cli.py
