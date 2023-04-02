@@ -1,4 +1,5 @@
 import click
+
 from pdf_split_middle import pdf_split_middle
 
 

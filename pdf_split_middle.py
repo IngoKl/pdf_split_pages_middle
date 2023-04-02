@@ -1,6 +1,7 @@
 import copy
 import decimal
-from PyPDF2 import PdfWriter,PdfReader
+
+from PyPDF2 import PdfReader, PdfWriter
 
 output = PdfWriter()
 
