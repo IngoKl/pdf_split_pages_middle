@@ -19,6 +19,12 @@ Often, documents and books are being scanned two pages at a time. This tool allo
 Technically, you only have to provide the path for the input file. The tool will then split every page into two halves.
 You can skip pages (comma separated list) and you can shift the 'line' at which to cut. Positive values (0.1 to 49) will shift the line to the right (percantages of the width of the document) and negative values (-0.1 to -49) will shift the line to the left.
 
+### Directory splitting
+
+`python cli.py my_pdf_folder --recursive --recursive_suffix my_suffix --skip_pages 0,1 --shift_middle_percentage 0`
+
+To walk through a given directory and split every PDF within it and its subfolders, use the `--recursive` parameter. Since providing a specific output path is not possible here, you can define a custom suffix with `--recursive_suffix`. The output directory of the PDF will be the same as the input pdf.
+
 ## Creating a Binary
 
 The Windows binary was created using `pyinstaller` on Windows 10. If you want to create your own binary:
